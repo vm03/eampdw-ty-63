@@ -1,7 +1,9 @@
 esphome:
-  name: power-meter
-  platformio_options:
-    board_build.flash_mode: dio
+  name: eampdw
+  name_add_mac_suffix: true
+  project:
+    name: "eampdw.local"
+    version: "0.9.0"
 
 esp32:
   board: esp32-c3-devkitm-1
