@@ -89,19 +89,13 @@ sensor:
     icon: "mdi:sigma"
     device_class: "energy"
     state_class: measurement
-    
+
 switch:
   - platform: "tuya"
     id: "meter_power_relay"
     name: "Power Switch"
     switch_datapoint: 16
     icon: "mdi:power"
-    on_turn_off:
-      then:
-        lambda: |-
-          id(voltage).publish_state(0);
-          id(current).publish_state(0);
-          id(power).publish_state(0);
 
   - platform: "uart"
     id: sw_tuya_query_status
